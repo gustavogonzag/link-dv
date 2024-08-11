@@ -22,7 +22,7 @@ function App() {
           </button>
         </a>
 
-        <a href="https://www.canva.com/link?target=https%3A%2F%2Fapi.whatsapp.com%2Fsend%3Fphone%3D5573991384112&design=DAETOp9H640&accessRole=owner&linkSource=document">
+        <a href="https://wa.me/5573991384112">
           <button className="bg-branco w-80 h-14 rounded flex items-center justify-center mt-10">
             <div className="flex items-center">
               <IoLogoWhatsapp className="text-3xl mr-2" id='icon2' />
