@@ -1,53 +1,53 @@
 import './App.css'
 import logodv from '/logo-dv.png'
-import { IoBag } from "react-icons/io5";
-import { IoLogoWhatsapp } from "react-icons/io";
-import { MdLocationPin } from "react-icons/md";
+import { IoBag, IoLogoWhatsapp } from 'react-icons/io5'
+import { MdLocationPin } from 'react-icons/md'
 
 function App() {
-
   return (
-    <div className='min-h-screen w-ful bg-verde-dv bg-cover'>
+    <main className="page">
+      <div className="content">
+        <img className="logo" src={logodv} alt="Delícia Vegana" />
 
-      <div className='flex flex-col items-center'>
+        <section className="links" aria-label="Links de atendimento">
+          <div
+            className="link-button order-button disabled"
+            aria-disabled="true"
+            title="Pedidos pelo site indisponíveis temporariamente"
+          >
+            <IoBag className="button-icon" aria-hidden="true" />
+            <span>FAZER PEDIDO</span>
+          </div>
+          <p className="availability-note">Indisponível temporariamente</p>
 
-        <img className='size-4/5' src={logodv} alt="logodeliciavegana" />
+          <a
+            className="link-button whatsapp-button"
+            href="https://wa.me/5573991384112"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Fazer pedido pelo WhatsApp"
+          >
+            <IoLogoWhatsapp className="button-icon" aria-hidden="true" />
+            <span>PEDIR PELO WHATSAPP</span>
+          </a>
+          <p className="whatsapp-note">No momento, todos os pedidos são feitos pelo WhatsApp.</p>
+        </section>
 
-        <a href="https://fooduai.com.br/menu-delicia-vegana">
-          <button className="bg-amarelo w-80 h-14 rounded flex items-center justify-center mt-10">
-            <div className="flex items-center">
-              <IoBag className="text-3xl mr-2" id='icon' />
-              <p className="text-3xl font-bold">FAZER PEDIDO</p>
-            </div>
-          </button>
-        </a>
-
-        <a href="https://wa.me/5573991384112">
-          <button className="bg-branco w-80 h-14 rounded flex items-center justify-center mt-10">
-            <div className="flex items-center">
-              <IoLogoWhatsapp className="text-3xl mr-2" id='icon2' />
-              <p className="text-3xl font-bold text-verde">FALE CONOSCO</p>
-            </div>
-          </button>
-        </a>
-
-        <div className='mt-10 flex flex-col text-center'>
+        <section className="description">
           <p>Comida vegana, saudável e <strong>deliciosa!</strong></p>
-          <p className='italic'>Sem Leite, Sem Ovos, Sem Carnes</p>
+          <p className="italic">Sem Leite, Sem Ovos, Sem Carnes</p>
+        </section>
+
+        <div className="location">
+          <MdLocationPin className="location-icon" aria-hidden="true" />
+          <p className="italic">Itabuna-BA</p>
         </div>
 
-        <div className='flex items-center justify-center mt-10'>
-          <MdLocationPin id='icon3' />
-          <p className='italic'>Itabuna-BA</p>
-        </div>
-
-        <div className='mt-10'>
-          <p><strong>Delícia Vegana</strong> - <span className='italic'>Desde 2018</span></p>
-        </div>
-
+        <footer>
+          <p><strong>Delícia Vegana</strong> - <span className="italic">Desde 2018</span></p>
+        </footer>
       </div>
-
-    </div>
+    </main>
   )
 }
 
