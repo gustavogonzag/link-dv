@@ -7,44 +7,42 @@ function App() {
   return (
     <main className="page">
       <div className="content">
-        <img className="logo" src={logodv} alt="Delícia Vegana" />
+        <header className="hero">
+          <img className="logo" src={logodv} alt="Delícia Vegana" />
+          <div className="description">
+            <h1>Comida vegana, saudável e <strong>deliciosa!</strong></h1>
+            <p>Sem leite, sem ovos, sem carnes</p>
+          </div>
+        </header>
 
         <section className="links" aria-label="Links de atendimento">
-          <div
-            className="link-button order-button disabled"
-            aria-disabled="true"
-            title="Pedidos pelo site indisponíveis temporariamente"
-          >
-            <IoBag className="button-icon" aria-hidden="true" />
-            <span>FAZER PEDIDO</span>
-          </div>
-          <p className="availability-note">Indisponível temporariamente</p>
-
           <a
             className="link-button whatsapp-button"
-            href="https://wa.me/5573991384112"
+            href="https://wa.me/5573991384112?text=Ol%C3%A1%21%20Gostaria%20de%20fazer%20um%20pedido."
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Fazer pedido pelo WhatsApp"
           >
             <IoLogoWhatsapp className="button-icon" aria-hidden="true" />
-            <span>PEDIR PELO WHATSAPP</span>
+            <span>FAZER PEDIDO PELO WHATSAPP</span>
           </a>
-          <p className="whatsapp-note">No momento, todos os pedidos são feitos pelo WhatsApp.</p>
-        </section>
+          <p className="whatsapp-note">Todos os pedidos estão sendo feitos pelo WhatsApp.</p>
 
-        <section className="description">
-          <p>Comida vegana, saudável e <strong>deliciosa!</strong></p>
-          <p className="italic">Sem Leite, Sem Ovos, Sem Carnes</p>
+          <aside className="availability-card" aria-label="Aviso sobre o cardápio online">
+            <IoBag className="availability-icon" aria-hidden="true" />
+            <div>
+              <strong>Cardápio online indisponível</strong>
+              <p>Temporariamente, faça seu pedido pelo WhatsApp.</p>
+            </div>
+          </aside>
         </section>
-
-        <div className="location">
-          <MdLocationPin className="location-icon" aria-hidden="true" />
-          <p className="italic">Itabuna-BA</p>
-        </div>
 
         <footer>
-          <p><strong>Delícia Vegana</strong> - <span className="italic">Desde 2018</span></p>
+          <div className="location">
+            <MdLocationPin className="location-icon" aria-hidden="true" />
+            <span>Itabuna-BA</span>
+          </div>
+          <p><strong>Delícia Vegana</strong> <span aria-hidden="true">•</span> Desde 2018</p>
         </footer>
       </div>
     </main>
