@@ -2,15 +2,16 @@
   min-height: 100vh;
   min-height: 100svh;
   width: 100%;
-  padding: clamp(0.75rem, 3vw, 2rem) 1rem;
+  padding: 0.75rem;
   background: #158700 url('/BACKGROUND.png') center / cover;
   color: white;
 }
 
 .content {
-  width: min(100%, 28rem);
+  width: 100%;
+  max-width: 28rem;
   margin: 0 auto;
-  padding: clamp(1.25rem, 5vw, 2rem);
+  padding: 1.25rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,14 +31,15 @@
 }
 
 .logo {
-  width: clamp(10rem, 50vw, 16rem);
+  width: min(50vw, 13rem);
+  min-width: 9rem;
   height: auto;
   display: block;
 }
 
 .links {
   width: 100%;
-  margin-top: clamp(1.5rem, 4vh, 2rem);
+  margin-top: 1.5rem;
 }
 
 .link-button {
@@ -49,10 +51,11 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  font-size: clamp(1rem, 4.5vw, 1.3rem);
+  font-size: 1rem;
   font-weight: 700;
   line-height: 1.15;
   text-decoration: none;
+  transition: transform 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
 }
 
 .button-icon {
@@ -60,33 +63,50 @@
   font-size: 1.75rem;
 }
 
-.whatsapp-note {
+.link-note {
   margin-top: 0.6rem;
   font-size: 0.875rem;
   line-height: 1.35;
   color: rgb(255 255 255 / 86%);
 }
 
+.menu-button {
+  background-color: #f2a922;
+  color: #fff;
+  box-shadow: 0 0.4rem 1rem rgb(0 46 0 / 20%);
+}
+
 .whatsapp-button {
+  margin-top: 1rem;
   background-color: #f6f6f6;
   color: #158700;
   box-shadow: 0 0.4rem 1rem rgb(0 46 0 / 20%);
-  transition: transform 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
 }
 
-.whatsapp-button:hover {
+.link-button:hover {
   transform: translateY(-1px);
-  background-color: white;
   box-shadow: 0 0.55rem 1.25rem rgb(0 46 0 / 28%);
 }
 
-.whatsapp-button:active {
+.menu-button:hover {
+  background-color: #f7b63d;
+}
+
+.whatsapp-button:hover {
+  background-color: white;
+}
+
+.link-button:active {
   transform: translateY(1px);
 }
 
-.whatsapp-button:focus-visible {
+.link-button:focus-visible {
   outline: 3px solid #f2a922;
   outline-offset: 3px;
+}
+
+.menu-button:focus-visible {
+  outline-color: #fff;
 }
 
 .description {
@@ -95,7 +115,7 @@
 
 .description h1 {
   max-width: 22rem;
-  font-size: clamp(1.05rem, 4vw, 1.25rem);
+  font-size: 1.05rem;
   font-weight: 400;
   line-height: 1.4;
 }
@@ -107,40 +127,9 @@
   font-style: italic;
 }
 
-.availability-card {
-  margin-top: 1.5rem;
-  padding: 0.9rem 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  text-align: left;
-  background: rgb(242 169 34 / 15%);
-  border: 1px solid rgb(242 169 34 / 55%);
-  border-radius: 0.75rem;
-}
-
-.availability-icon {
-  flex: 0 0 auto;
-  color: #f2a922;
-  font-size: 1.4rem;
-}
-
-.availability-card strong {
-  display: block;
-  font-size: 0.9rem;
-  line-height: 1.3;
-}
-
-.availability-card p {
-  margin-top: 0.15rem;
-  color: rgb(255 255 255 / 78%);
-  font-size: 0.8rem;
-  line-height: 1.35;
-}
-
 footer {
   width: 100%;
-  margin-top: clamp(1.5rem, 5vh, 2.25rem);
+  margin-top: 1.5rem;
   padding-top: 1rem;
   border-top: 1px solid rgb(255 255 255 / 18%);
   color: rgb(255 255 255 / 82%);
@@ -160,17 +149,21 @@ footer {
   font-size: 1.15rem;
 }
 
-@media (max-width: 360px) {
+@media (min-width: 361px) {
   .page {
-    padding-inline: 0.75rem;
-  }
-
-  .link-button {
-    padding-inline: 0.65rem;
+    padding: 1rem;
   }
 
   .content {
-    padding-inline: 1rem;
+    padding: 1.5rem;
+  }
+
+  .logo {
+    width: min(50vw, 15rem);
+  }
+
+  .link-button {
+    font-size: 1.125rem;
   }
 }
 
@@ -178,11 +171,32 @@ footer {
   .page {
     display: grid;
     place-items: center;
+    padding: 2rem;
+  }
+
+  .content {
+    padding: 2rem;
+  }
+
+  .logo {
+    width: 16rem;
+  }
+
+  .links {
+    margin-top: 2rem;
+  }
+
+  .description h1 {
+    font-size: 1.25rem;
+  }
+
+  footer {
+    margin-top: 2.25rem;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .whatsapp-button {
+  .link-button {
     transition: none;
   }
 }

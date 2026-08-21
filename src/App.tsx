@@ -17,24 +17,28 @@ function App() {
 
         <section className="links" aria-label="Links de atendimento">
           <a
-            className="link-button whatsapp-button"
-            href="https://wa.me/5573991384112?text=Ol%C3%A1%21%20Gostaria%20de%20fazer%20um%20pedido."
+            className="link-button menu-button"
+            href="https://deliciavegana.com"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Fazer pedido pelo WhatsApp"
+            aria-label="Acessar o cardápio online"
+          >
+            <IoBag className="button-icon" aria-hidden="true" />
+            <span>ACESSAR CARDÁPIO ONLINE</span>
+          </a>
+          <p className="link-note">conheça nosso cardápio</p>
+
+          <a
+            className="link-button whatsapp-button"
+            href="https://wa.me/5573991384112?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20com%20a%20Del%C3%ADcia%20Vegana."
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Fale conosco pelo WhatsApp"
           >
             <IoLogoWhatsapp className="button-icon" aria-hidden="true" />
-            <span>FAZER PEDIDO PELO WHATSAPP</span>
+            <span>FALE CONOSCO</span>
           </a>
-          <p className="whatsapp-note">Todos os pedidos estão sendo feitos pelo WhatsApp.</p>
-
-          <aside className="availability-card" aria-label="Aviso sobre o cardápio online">
-            <IoBag className="availability-icon" aria-hidden="true" />
-            <div>
-              <strong>Cardápio online indisponível</strong>
-              <p>Temporariamente, faça seu pedido pelo WhatsApp.</p>
-            </div>
-          </aside>
+          <p className="link-note">encomendas, pedidos, dúvidas</p>
         </section>
 
         <footer>
